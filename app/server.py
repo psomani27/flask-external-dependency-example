@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route("/run")
 def index():
     def handle_sub_view():
-        for i in range(0, 5):
+        l=[3,5,7,14,21]
+        for loop in l:
             print("Hello World!")
             time.sleep(1)
     threading.Thread(target=handle_sub_view).start()
